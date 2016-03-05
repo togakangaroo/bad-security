@@ -6,7 +6,7 @@ describe(`try out sql injection`, () => {
 		sqlInjection()
 		setTimeout(done, 200);
 	})
-	it(() => {
+	it(`fails`, () => {
 		assert(false)
 	})
 })

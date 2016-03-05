@@ -1,0 +1,39 @@
+{
+    "rules": {
+        "indent": [
+            0,
+            "tab"
+        ],
+        "quotes": [
+            0,
+            "single"
+        ],
+        "linebreak-style": [
+            0,
+            "windows"
+        ],
+        "semi": [
+            0,
+            "never"
+        ],
+        "no-empty-pattern": [0],
+        "comma-dangle": [0],
+        "no-constant-condition": [0],
+        "no-console": [0],
+        "mocha/no-exclusive-tests": [2]
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "mocha": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "plugins": [
+        "mocha",
+        "chai"
+    ]
+}

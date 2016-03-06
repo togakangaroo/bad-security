@@ -1,5 +1,6 @@
 module.exports = wallaby => ({
   files: [
+    'data/db.db',
     'src/**/*.js',
   ],
 
@@ -10,5 +11,5 @@ module.exports = wallaby => ({
     type: 'node',
   },
   compilers: {
-  }
+  },
 })

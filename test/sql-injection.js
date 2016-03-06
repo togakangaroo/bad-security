@@ -2,11 +2,10 @@ const assert = require('assert')
 const sqlInjection = require('../src/sqlInjection')
 
 describe(`try out sql injection`, () => {
-	beforeEach(done => {
-		sqlInjection()
-		setTimeout(done, 200);
-	})
+	beforeEach(done =>
+		sqlInjection(':memory:').then(done)
+	)
 	it(`fails`, () => {
-		assert(false)
+		assert(true)
 	})
 })

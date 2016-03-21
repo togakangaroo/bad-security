@@ -21,6 +21,7 @@
     "co-sqlite3": "^0.1.3",
     "express": "^4.13.4",
     "generator-async": "^0.1.2",
+    "node-uuid": "^1.4.7",
     "sqlite3": "^3.1.1"
   }
 }

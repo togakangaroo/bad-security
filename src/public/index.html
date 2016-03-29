@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/style.css" />
+<ul class="notes">
+</ul>
+
+<form method="post" action="/sticky-note">
+	<label>
+		<span class="label">Name</span>
+		<input name="name" placeholder="Name" required minlength="2">
+	</label>
+	<label>
+		<span class="label">Message</span>
+		<textarea name="message" placeholder="Message..." required minlength="10"></textarea>
+	</label>
+	<div class="actions">
+		<button>Post</button>
+	</div>
+</form>
+
+<script>
+fetch(new Request('/sticky-note'))
+	.then(x => x.json())
+	.then(notes =>
+		notes.map(({name, message}) => {
+			const li = document.createElement('li')
+			li.innerHTML = `<blockquote>${message}</blockquote><cite>${name}</cite>`
+			return li
+		}).reduce((ul, li) =>
+			(ul.appendChild(li), ul),
+			document.querySelector('.notes')
+		)
+	).then(null, err => console.error(err))
+</script>
